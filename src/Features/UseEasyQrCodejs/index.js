@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import QRCode from 'easyqrcodejs'
-import Button from './Components/Button'
+import Button from '../../Components/Button'
 
-function Test() {
+function UseEasyQrCodejs() {
     const [value, setValue] = useState("")
 
     useEffect(() => {
@@ -60,4 +60,4 @@ function Test() {
     )
 }
 
-export default Test
+export default UseEasyQrCodejs

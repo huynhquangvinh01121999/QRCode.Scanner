@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+.container {
+  padding: 20px;
+}
+
 .title {
   text-align: center;
   font-size: 20px;
@@ -61,6 +65,60 @@ code {
 input[type="file"] {
   color: white;
   cursor: pointer;
-  margin-left: 500px;
+  margin-left: 200px;
   margin-top: 10px;
+}
+
+.form_input {
+  width: 40%;
+  border-right: 1px solid silver;
+  height: 500px;
+  display: inline-block;
+}
+
+.form_output {
+  width: 59%;
+  height: 500px;
+  display: inline;
+  float: right;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .main {
+    width: 225px;
+    margin-right: 100px;
+  }
+
+  input[type="file"] {
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .form_input {
+    width: 375px;
+    display: block;
+    height: max-content;
+    border: none;
+  }
+
+  .form_output {
+    width: 300px;
+    display: block;
+    margin-top: 20px;
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .form_input {
+    width: 300px;
+  }
+
+  .form_output {
+    width: 250px;
+  }
 }
