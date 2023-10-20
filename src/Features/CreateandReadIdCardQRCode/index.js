@@ -74,17 +74,20 @@ function CreateandReadIdCardQRCode() {
 
     const onScanError = (errorMessage) => {
         console.log(`Scan error: ${errorMessage}`);
+        // alert(errorMessage)
     }
 
     useEffect(() => {
         const html5QrcodeScanner = new Html5QrcodeScanner(
-            "reader", { fps: 10, qrbox: 60, aspectRatio: 1.0, formatsToSupport: 0 });
+            "reader", { fps: 10, qrbox: 60 });
+
+        // console.log(html5QrcodeScanner);
         html5QrcodeScanner.render(onScanSuccess, onScanError);
     }, [])
 
     return (
         <div className='container'>
-            <div className='form_input'>
+            {/* <div className='form_input'>
                 <div className="main">
                     <textarea rows={8} value={value}
                         placeholder="Input text to convert QR"
@@ -107,7 +110,7 @@ function CreateandReadIdCardQRCode() {
                     </a>
                 </div>
                 <div>
-                    <div id="reader"></div>
+                    <div id="reader" style={{ width: "100%", backgroundColor: "white" }}></div>
                     <input type="file"
                         accept="image/*"
                         onChange={handleScanQrCode} />
@@ -130,7 +133,9 @@ function CreateandReadIdCardQRCode() {
                     <FieldInput type={`text`} title={`Country`} value={infomation.address.split(',')[5]} />
                     <FieldInput type={`date`} title={`Created`} value={SplitDate(infomation.created)} />
                 </form>
-            </div>
+            </div> */}
+
+            
         </div>
     )
 }
